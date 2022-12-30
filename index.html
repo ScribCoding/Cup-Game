@@ -12,7 +12,8 @@
     <body>
         <div id= game_container>
             <div id= "after_screen" class="after_screen_hide">
-                <div id="reset_button"></div>
+                <p id="result_display">YOU LOST</p>
+                <button id="reset_button">play again</button>
             </div>
             <div id="choices_container">
 
@@ -39,6 +40,10 @@
 
                 </div>
             </div>
+        </div>
+
+        <div id="winStreak">
+            <p id="win_streak_label">win streak: </p>
         </div>
         
         <script src="/javascript.js" async defer></script>

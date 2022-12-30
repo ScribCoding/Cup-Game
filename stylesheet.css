@@ -1,7 +1,10 @@
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 100px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 
@@ -9,20 +12,21 @@ body{
     position: relative;
     width: 800px;
     height: 500px;
-    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 2em;
     overflow: hidden;
+    background-image: url("/game_elements/space_background.gif");
+    background-position: center;
+    background-size: 900px 900px;
     
 }
 
 #choices_container{
     width: 100%;
     height: 200px;
-    background-color: lightseagreen;
     display: flex;
     justify-content: space-around;
 
@@ -33,14 +37,12 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: bisque;
-    border: solid 2px;
 }
 
 #box_one, #box_two, #box_three{
     transition-property: translate;
     transition-duration: 0.2s;
-    background-image: url(/game_elements/box.png);
+    background-image: url(/game_elements/redsolo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 200px;
@@ -54,7 +56,7 @@ body{
 .lift{
     transition-property: translate;
     transition-duration: 0.2s;
-    translate: 0px -100px;
+    translate: 0px -150px;
 
 }
 
@@ -66,8 +68,8 @@ body{
 }
 
 .bonbon{
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 150px;
+    max-height: 150px;
     position: absolute;
 }
 
@@ -98,7 +100,7 @@ body{
 .after_screen_show{
     transition-property: opacity;
     transition-duration: 1s;
-    background-color: grey;
+    background-color: black;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -106,26 +108,50 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 85%;
+    opacity: 100%;
 }
 
 .after_screen_hide{
-    background-color: grey;
-    width: 100%;
-    height: 100%;
     position: absolute;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 0%;
     transform: translateY(500px);
+}
+
+#result_display{
+    position: absolute;
+    color: #047bfb;
+    top: 100px;
+    font-size: 50px;
     
-   }
+}
 
 #reset_button{
-    width: 100px;
-    height: 50px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 190px;
+    width: 150px;
+    height: 60px;
     background-color: whitesmoke;
-    
+    border-radius: 2em
+}
+
+.shine_before{
+
+}
+
+#winStreak{
+    min-width: 180px;
+    padding: 10px;
+    border: #e5395d solid 4px;
+    border-radius: 2em;
+    color: #e5395d;
+}
+
+@font-face {
+    font-family: space;
+    src: url(/Space\ Adventure.ttf);
+}
+
+*{
+    font-family: space;
 }
