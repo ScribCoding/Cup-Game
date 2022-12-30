@@ -18,7 +18,7 @@ body{
     flex-direction: column;
     border-radius: 2em;
     overflow: hidden;
-    background-image: url("/game_elements/space_background.gif");
+    background-image: url("game_elements/space_background.gif");
     background-position: center;
     background-size: 900px 900px;
     
@@ -42,7 +42,7 @@ body{
 #box_one, #box_two, #box_three{
     transition-property: translate;
     transition-duration: 0.2s;
-    background-image: url(/game_elements/redsolo.png);
+    background-image: url('game_elements/redsolo.png');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 200px;
@@ -135,10 +135,6 @@ body{
     border-radius: 2em
 }
 
-.shine_before{
-
-}
-
 #winStreak{
     min-width: 180px;
     padding: 10px;
@@ -149,7 +145,7 @@ body{
 
 @font-face {
     font-family: space;
-    src: url(/Space\ Adventure.ttf);
+    src: url(Space\ Adventure.ttf);
 }
 
 *{
