@@ -4,7 +4,7 @@ let choices = document.getElementsByClassName("choice");
 let reset_button = document.getElementById("reset_button");
 let isSelected = false;
 let winOrLoss = false;
-let winStreak = 0;
+let winStreak = 0; //keep track of streak
 let result_label = document.getElementById("result_display");
 let win_streak_label = document.getElementById("win_streak_label")
 
