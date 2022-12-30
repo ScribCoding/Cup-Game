@@ -1,26 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
 #game_container{
-    width: 500px;
+    position: relative;
+    width: 800px;
     height: 500px;
     background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-#reset_button{
-    width: 100px;
-    height: 100px;
-    background-color: whitesmoke;
+    border-radius: 2em;
+    overflow: hidden;
+    
 }
 
 #choices_container{
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    height: 200px;
     background-color: lightseagreen;
     display: flex;
     justify-content: space-around;
-    align-items: center;
 
 }
 
@@ -39,8 +43,8 @@
     background-image: url(/game_elements/box.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,13 +54,14 @@
 .lift{
     transition-property: translate;
     transition-duration: 0.2s;
-    translate: 0px -50px;
+    translate: 0px -100px;
 
 }
 
 #hover_one,#hover_two,#hover_three{
-    width: 20px;
-    height: 20px;
+    width: 90%;
+    height: 90%;
+    opacity: 0%;
     background-color: red;
 }
 
@@ -64,4 +69,63 @@
     max-width: 50%;
     max-height: 50%;
     position: absolute;
+}
+
+@keyframes shake {
+
+    0%{
+        transform: translateX(0px);
+    }
+
+    50%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.shake{
+    animation: shake;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+
+}
+
+
+
+.after_screen_show{
+    transition-property: opacity;
+    transition-duration: 1s;
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 85%;
+}
+
+.after_screen_hide{
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0%;
+    transform: translateY(500px);
+    
+   }
+
+#reset_button{
+    width: 100px;
+    height: 50px;
+    background-color: whitesmoke;
+    
 }
