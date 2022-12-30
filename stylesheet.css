@@ -1,0 +1,67 @@
+#game_container{
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#reset_button{
+    width: 100px;
+    height: 100px;
+    background-color: whitesmoke;
+}
+
+#choices_container{
+    width: 500px;
+    height: 250px;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#choice_one, #choice_two, #choice_three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: bisque;
+    border: solid 2px;
+}
+
+#box_one, #box_two, #box_three{
+    transition-property: translate;
+    transition-duration: 0.2s;
+    background-image: url(/game_elements/box.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.lift{
+    transition-property: translate;
+    transition-duration: 0.2s;
+    translate: 0px -50px;
+
+}
+
+#hover_one,#hover_two,#hover_three{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.bonbon{
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
+}
