@@ -2,13 +2,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    background-color: #d3e0ee;
     flex-direction: column;
     gap: 10px;
 }
 
 
 #game_container{
+    top: 10vh;
     position: relative;
     width: 800px;
     height: 500px;
@@ -136,6 +137,8 @@ body{
 }
 
 #winStreak{
+    position: relative;
+    top: 10vh;
     min-width: 180px;
     padding: 10px;
     border: #e5395d solid 4px;
@@ -150,4 +153,15 @@ body{
 
 *{
     font-family: space;
+}
+
+@media screen and (max-width: 600px) {
+    #game_container{
+        width: 90vw;
+
+    }    
+
+    #choices_container{
+        transform: scale(0.5);
+    }
 }
